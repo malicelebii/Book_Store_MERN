@@ -1,9 +1,9 @@
 import express from "express";
 import { PORT } from "./config.js ";
 import mongoose from "mongoose";
-import { MONGODB_URI } from "./config.js";
 import bookRoutes from './routes/bookRoutes.js'
 import cors from 'cors'
+import 'dotenv'
 
 
 const app = express();
@@ -21,6 +21,6 @@ app.listen(PORT, () => {
 });
 
 mongoose
-  .connect(MONGODB_URI)
+  .connect(process.env.MONGODB_URI)
   .then(() => console.log("baglandi"))
   .catch((err) => console.log(err));
