@@ -8,10 +8,10 @@ dotenv.config()
 
 const app = express();
 app.use(cors({
-  origin: 'https://book-store-mern-frontend-rho.vercel.app/',
+  origin: 'https://book-store-mern-frontend-rho.vercel.app',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
-}))
-
+}));
 
 
 app.use(express.json());
