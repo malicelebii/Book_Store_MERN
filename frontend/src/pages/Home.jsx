@@ -15,7 +15,7 @@ export const Home = () => {
     setLoading(true);
 
     axios
-      .get("http://localhost:5555/books")
+      .get("https://book-store-mern-backend.vercel.app/books")
       .then((res) => {
         setBooks(res.data);
         setLoading(false);
