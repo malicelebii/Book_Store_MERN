@@ -9,7 +9,6 @@ dotenv.config()
 const app = express();
 app.use(cors({
   origin: 'https://book-store-mern-frontend-rho.vercel.app/',
-  methods: 'GET,PUT,POST,DELETE',
   credentials: true,
 }))
 
