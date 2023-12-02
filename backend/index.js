@@ -1,5 +1,4 @@
 import express from "express";
-import { PORT } from "./config.js ";
 import mongoose from "mongoose";
 import bookRoutes from './routes/bookRoutes.js'
 import cors from 'cors'
@@ -17,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/books",bookRoutes)
 
-app.listen(PORT, () => {
+app.listen(5555, () => {
   console.log("Running");
 });
 
