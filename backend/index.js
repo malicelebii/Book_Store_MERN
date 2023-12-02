@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/books",bookRoutes)
 
-app.listen(5555, () => {
+app.listen(process.env.PORT || 5555, () => {
   console.log("Running");
 });
 
