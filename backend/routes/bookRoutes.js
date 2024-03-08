@@ -5,13 +5,18 @@ const router = express.Router();
 
 router.post("/", async (req, res) => {
   console.log(req.body);
+
   try {
     if (!req.body.title || !req.body.author || !req.body.publishYear) {
       return res.status(400);
     }
+   
+
     const { title, author, publishYear } = req.body;
 
-    const newBook = { title, author, publishYear };
+    let imageUrl = req.body.imageUrl || null
+
+    const newBook = { title, author, publishYear, imageUrl };
 
     const book = await Book.create(newBook);
 
